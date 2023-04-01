@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body>
+		<header>
+			<div class="header__content">Matrix калькуляка</div>
+		</header>
+		<section class="page">
+			<div class="wrapper">
+				<div class="matrix-container"></div>
+			</div>
+			<div class="matrix__size">
+				<form class="matrix-size-form">
+					<div>
+						<label for="matrix-height">H:</label>
+						<select id="matrix-height" name="matrix-height">
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					</div>
+					<div>
+						<label for="matrix-width">H:</label>
+						<select id="matrix-width" name="matrix-width">
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+					</div>
+				</form>
+			</div>
+			<div class="matrix-add">
+				<button class="matrix-add-btn">1</button>
+			</div>
+			<div class="operators">
+				<div class="operator__plus">
+					<button class="operator__plus-btn">+</button>
+				</div>
+				<div class="operator__minus">
+					<button class="operator__minus-btn">-</button>
+				</div>
+				<div class="operator__multyply">
+					<button class="operator__multyply-btn">*</button>
+				</div>
+				<div class="operator__divide">
+					<button class="operator__divide-btn">/</button>
+				</div>
+			</div>
+			<div class="resault"></div>
+		</section>
+
+		<script src="script.js"></script>
+	</body>
+</html>
+
+<!-- нужно создать матричный калькулятор используя JS для начала напиши только ту
+функцию которая будет добавлять новую матрицу на страницу учитывая показатели
+высоты и ширины на странице после нажатия на кнопку с классом matrix-add-btn
+которая находится в блоке с классом matrix-add на странице в блоке
+matrix-container должен появится новый матрикс 
+<div class="matrix" id="matrix-1">
+	<div class="matrix__name">1</div>
+	<div class="matrix__input" id="matrix-form">
+		<table>
+			<tbody>
+				<tr>
+					<td><input type="number" /></td>
+					<td><input type="number" /></td>
+					<td><input type="number" /></td>
+				</tr>
+				<tr>
+					<td><input type="number" /></td>
+					<td><input type="number" /></td>
+					<td><input type="number" /></td>
+				</tr>
+				<tr>
+					<td><input type="number" /></td>
+					<td><input type="number" /></td>
+					<td><input type="number" /></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+таких матриксов может быть до 5 штук
+соответственно <div class="matrix" id="matrix-1"></div> матрикса и его <div class="matrix__name">1</div>
+должны меняться на 
+<div class="matrix" id="matrix-2"></div> матрикса и его <div class="matrix__name">2</div>
+<div class="matrix" id="matrix-3"></div> матрикса и его <div class="matrix__name">3</div>
+и так до 5
+
+также на странице в <div class="resault"></div>
+нужно создать еще 1 матрикс такой матрикс создается 1 раз
+при первом нажаии на кнопку matrix-add-btn
+					<div class="matrix" id="matrix-1">
+						<div class="matrix__name">1</div>
+						<div class="matrix__input" id="matrix-form">
+							<table>
+								<tbody>
+									<tr>
+										<td><input type="number" /></td>
+										<td><input type="number" /></td>
+										<td><input type="number" /></td>
+									</tr>
+									<tr>
+										<td><input type="number" /></td>
+										<td><input type="number" /></td>
+										<td><input type="number" /></td>
+									</tr>
+									<tr>
+										<td><input type="number" /></td>
+										<td><input type="number" /></td>
+										<td><input type="number" /></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+
+
+<section class="page">
+	<div class="wrapper">
+		<div class="matrix-container"></div>
+	</div>
+	<div class="matrix__size">
+		<form class="matrix-size-form">
+			<div>
+				<label for="matrix-height">H:</label>
+				<select id="matrix-height" name="matrix-height">
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+			</div>
+			<div>
+				<label for="matrix-width">H:</label>
+				<select id="matrix-width" name="matrix-width">
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+			</div>
+		</form>
+	</div>
+	<div class="matrix-add">
+		<button class="matrix-add-btn">1</button>
+	</div>
+	<div class="operators">
+		<div class="operator__plus">
+			<button class="operator__plus-btn">+</button>
+		</div>
+		<div class="operator__minus">
+			<button class="operator__minus-btn">-</button>
+		</div>
+		<div class="operator__multyply">
+			<button class="operator__multyply-btn">*</button>
+		</div>
+		<div class="operator__divide">
+			<button class="operator__divide-btn">/</button>
+		</div>
+	</div>
+	<div class="matrix-resault" id="resault"></div>
+</section> -->

@@ -1,0 +1,69 @@
+h1 {
+	color: rgb(59, 59, 59);
+}
+body {
+	background: #626262;
+}
+
+.matrix {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	/* max-width: 300px; */
+	align-items: center;
+	margin: 20px;
+}
+
+.matrix-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	min-height: 200px;
+	background: rebeccapurple;
+}
+
+input[type='number'] {
+	width: 44px;
+	height: 20px;
+	margin: 10px;
+	color: rgb(44, 44, 44);
+	background: rgb(220, 220, 220);
+	border: none;
+	border: 1px solid rgb(187, 187, 187);
+	border-radius: 8px;
+}
+
+table {
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+td {
+	border: 1px solid rgb(213, 213, 213);
+	/* width: 40px;
+	height: 20px; */
+	text-align: center;
+}
+
+/* скрываем стрелочки при наведении на inpute */
+input[type='number'] {
+	-moz-appearance: textfield; /* Firefox */
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type='number']::-ms-clear {
+	display: none; /* IE 10+ */
+}
+
+input[type='number']::-webkit-contacts-auto-fill-button {
+	display: none; /* Safari */
+}
+
+/* стили секции настройки высоты и ширины */
+.matrix__size {
+	display: flex;
+}
